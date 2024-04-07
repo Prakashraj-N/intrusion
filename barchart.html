@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>barchart</title>
+
+        <link rel="stylesheet" href="barchart.css">
+
+    </head>
+
+
+    <body>
+        <div class="nav">
+          <div >
+              <p class="nav-p">Intrusion Detection System</p>
+          </div>
+
+          <div class="nav-li">
+              <li>home</li>
+              <li>traffic</li>
+              <li>dashboard</li>
+              <li>monitor</li>
+          </div>
+
+        </div>
+
+
+        <div class="bar">
+
+            <div class="bar-p">
+                <p>The result of our system shows here</p>
+
+            </div>
+            
+            
+
+            <div>
+                
+                <canvas id="bar-chart"></canvas>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="chart.min.js"></script>
+        <script>
+            new Chart(document.getElementById('bar-chart'), {
+              type: 'bar',
+              data: {
+                labels: ["NORMAL", "DOS", "R2L", "U2R", "PROBE"],
+                datasets: [{
+                  backgroundColor: ["green", "#254BDD",
+                    "#ffbe0b", "#1d3557", "#326998"
+                  ],
+                  data: [30, 22, 12, 20, 16]
+                  
+               
+
+                }]
+              },
+              options: {
+                title: {
+                  display: true,
+                  text: 'Bar Chart for admin panel'
+                },
+                responsive: true
+              }
+            });
+          </script>
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
