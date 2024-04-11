@@ -32,10 +32,17 @@
             </div>
             
             
+            <div class="charts">
+                <div class="chart">
+                    
+                    <canvas id="bar-chart"></canvas>
+                </div>
 
-            <div>
-                
-                <canvas id="bar-chart"></canvas>
+
+                <div class="chart">
+                    
+                    <canvas id="bar-chart-2"></canvas>
+                </div>
             </div>
 
         </div>
@@ -60,6 +67,27 @@
         <script src="chart.min.js"></script>
         <script>
             new Chart(document.getElementById('bar-chart'), {
+              type: 'bar',
+              data: {
+                labels: ["NORMAL", "DOS", "R2L", "U2R", "PROBE"],
+                datasets: [{
+                    backgroundColor: ["green", "#254BDD",
+                        "#ffbe0b", "#1d3557", "#326998"],
+                    data: [30, 22, 12, 20, 16]
+                }]
+              },
+              options: {
+                title: {
+                  display: true,
+                  text: 'Bar Chart for admin panel'
+                },
+                responsive: true
+              }
+            });
+
+
+
+            new Chart(document.getElementById('bar-chart-2'), {
               type: 'bar',
               data: {
                 labels: ["NORMAL", "DOS", "R2L", "U2R", "PROBE"],
